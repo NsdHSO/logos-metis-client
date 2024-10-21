@@ -1,4 +1,4 @@
-import { isAndroid, isWeb } from '@/app/platform/detection';
+import { isAndroid } from '@app/platform/detection';
 
 export const TRACKING = isAndroid ? 0.1 : 0
 

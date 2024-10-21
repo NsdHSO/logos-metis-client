@@ -1,7 +1,43 @@
 import {Platform, StyleSheet, ViewStyle} from 'react-native'
-import { native, web } from '@/app/platform/detection';
 
 import * as tokens from './tokens'
+import { native, web } from '@app/platform/detection';
+export const headingStyles = {
+  1: {
+    fontSize: tokens.fontSize._5xl,
+    letterSpacing: tokens.TRACKING,
+  },
+  2: {
+    fontSize: tokens.fontSize._4xl,
+    letterSpacing: tokens.TRACKING,
+  },
+  3: {
+    fontSize: tokens.fontSize._3xl,
+    letterSpacing: tokens.TRACKING,
+  },
+  4: {
+    fontSize: tokens.fontSize._2xl,
+    letterSpacing: tokens.TRACKING,
+  },
+  5: {
+    fontSize: tokens.fontSize.xl,
+    letterSpacing: tokens.TRACKING,
+  },
+  6: {
+    fontSize: tokens.fontSize.lg,
+    letterSpacing: tokens.TRACKING,
+  },
+  7: {
+    fontSize: tokens.fontSize.md,
+    letterSpacing: tokens.TRACKING,
+  },
+  8: {
+    fontSize: tokens.fontSize.sm,
+    letterSpacing: tokens.TRACKING,
+  },
+};
+
+export type HeadingLevels = keyof typeof headingStyles;
 
 export const atoms = {
   debug: {
