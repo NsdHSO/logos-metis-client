@@ -2,38 +2,48 @@ import {Platform, StyleSheet, ViewStyle} from 'react-native'
 
 import * as tokens from './tokens'
 import { native, web } from '@app/platform/detection';
+import { fontWeight, lineHeight } from './tokens';
 export const headingStyles = {
   1: {
     fontSize: tokens.fontSize._5xl,
-    letterSpacing: tokens.TRACKING,
+    letterSpacing: lineHeight.relaxed,
+    lineHeight:40,
+    fontWeight: fontWeight.bold
   },
   2: {
     fontSize: tokens.fontSize._4xl,
     letterSpacing: tokens.TRACKING,
+    fontWeight: fontWeight.bold
   },
   3: {
     fontSize: tokens.fontSize._3xl,
     letterSpacing: tokens.TRACKING,
+    fontWeight: fontWeight.bold
   },
   4: {
     fontSize: tokens.fontSize._2xl,
     letterSpacing: tokens.TRACKING,
+    fontWeight: fontWeight.bold
   },
   5: {
     fontSize: tokens.fontSize.xl,
     letterSpacing: tokens.TRACKING,
+    fontWeight: fontWeight.bold
   },
   6: {
     fontSize: tokens.fontSize.lg,
     letterSpacing: tokens.TRACKING,
+    fontWeight: fontWeight.bold
   },
   7: {
     fontSize: tokens.fontSize.md,
     letterSpacing: tokens.TRACKING,
+    fontWeight: fontWeight.bold
   },
   8: {
     fontSize: tokens.fontSize.sm,
     letterSpacing: tokens.TRACKING,
+    fontWeight: fontWeight.bold
   },
 };
 

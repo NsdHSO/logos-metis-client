@@ -66,7 +66,7 @@ export const H6 = createHeadingElement({ level: 6 });
 export const H7 = createHeadingElement({ level: 7 });
 export const H8 = createHeadingElement({ level: 8 });
 
-export function P({ style, ...rest }: TextProps) {
+export function P({ style ,...rest }: TextProps) {
 
     const attr =
         web({
@@ -76,7 +76,7 @@ export function P({ style, ...rest }: TextProps) {
         <TextSyn
             {...attr}
             {...rest}
-            style={[atoms.text_md, atoms.leading_normal, flatten(style)]}
+            style={[atoms.text_md, style]}
         />
     );
 }

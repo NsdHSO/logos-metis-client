@@ -2,6 +2,8 @@ import { StyleSheet } from 'react-native';
 import ParallaxScrollView from '@components/ParallaxScrollView';
 import { H1, H2, H3, H4, H5, H6, H7, H8, P } from '@components/Typography';
 import React from 'react';
+import { ThemedView } from '@components/ThemedView';
+import { ThemedText } from '@components/ThemedText';
 
 
 export default function HomeScreen() {
@@ -9,20 +11,27 @@ export default function HomeScreen() {
         <ParallaxScrollView
             headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
         >
-            <P>Iadsfdfncu</P>
-            <H1>Parandulea</H1>
-            <H2>Parandulea</H2>
-            <H3>Parandulea</H3>
-            <H4>Parandulea</H4>
-            <H5>Parandulea</H5>
-            <H6>Parandulea</H6>
-            <H7>Parandulea</H7>
-            <H8>Parandulea</H8>
+            <ThemedView
+            style={styles.container}>
+                <P>Iadsfdfncu</P>
+                <H1>Parandulea</H1>
+                <H2>Parandulea</H2>
+                <H3>Parandulea</H3>
+                <H4>Parandulea</H4>
+                <H5>Parandulea</H5>
+                <H6>Parandulea</H6>
+                <H7>Parandulea</H7>
+                <H8>Parandulea</H8>
+            </ThemedView>
         </ParallaxScrollView>
     );
 }
 
 const styles = StyleSheet.create({
+    container:{
+      display: 'flex',
+        gap:0
+    },
     titleContainer: {
         flexDirection: 'row',
         alignItems: 'center',
