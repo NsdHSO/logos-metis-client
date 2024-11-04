@@ -1,49 +1,49 @@
-import {Platform, StyleSheet, ViewStyle} from 'react-native'
+import { Platform, StyleSheet, ViewStyle } from "react-native";
 
-import * as tokens from './tokens'
-import { native, web } from '@app/platform/detection';
-import { fontWeight, lineHeight } from './tokens';
+import * as tokens from "./tokens";
+import { native, web } from "@app/platform/detection";
+import { fontWeight, lineHeight } from "./tokens";
 export const headingStyles = {
   1: {
     fontSize: tokens.fontSize._5xl,
     letterSpacing: lineHeight.relaxed,
-    lineHeight:40,
-    fontWeight: fontWeight.bold
+    lineHeight: 40,
+    fontWeight: fontWeight.bold,
   },
   2: {
     fontSize: tokens.fontSize._4xl,
     letterSpacing: tokens.TRACKING,
-    fontWeight: fontWeight.bold
+    fontWeight: fontWeight.bold,
   },
   3: {
     fontSize: tokens.fontSize._3xl,
     letterSpacing: tokens.TRACKING,
-    fontWeight: fontWeight.bold
+    fontWeight: fontWeight.bold,
   },
   4: {
     fontSize: tokens.fontSize._2xl,
     letterSpacing: tokens.TRACKING,
-    fontWeight: fontWeight.bold
+    fontWeight: fontWeight.bold,
   },
   5: {
     fontSize: tokens.fontSize.xl,
     letterSpacing: tokens.TRACKING,
-    fontWeight: fontWeight.bold
+    fontWeight: fontWeight.bold,
   },
   6: {
     fontSize: tokens.fontSize.lg,
     letterSpacing: tokens.TRACKING,
-    fontWeight: fontWeight.bold
+    fontWeight: fontWeight.bold,
   },
   7: {
     fontSize: tokens.fontSize.md,
     letterSpacing: tokens.TRACKING,
-    fontWeight: fontWeight.bold
+    fontWeight: fontWeight.bold,
   },
   8: {
     fontSize: tokens.fontSize.sm,
     letterSpacing: tokens.TRACKING,
-    fontWeight: fontWeight.bold
+    fontWeight: fontWeight.bold,
   },
 };
 
@@ -51,7 +51,7 @@ export type HeadingLevels = keyof typeof headingStyles;
 
 export const atoms = {
   debug: {
-    borderColor: 'red',
+    borderColor: "red",
     borderWidth: 1,
   },
 
@@ -59,13 +59,16 @@ export const atoms = {
    * Positioning
    */
   fixed: {
-    position: Platform.select({web: 'fixed', native: 'absolute'}) as 'absolute',
+    position: Platform.select({
+      web: "fixed",
+      native: "absolute",
+    }) as "absolute",
   },
   absolute: {
-    position: 'absolute',
+    position: "absolute",
   },
   relative: {
-    position: 'relative',
+    position: "relative",
   },
   inset_0: {
     top: 0,
@@ -90,20 +93,20 @@ export const atoms = {
   },
 
   overflow_hidden: {
-    overflow: 'hidden',
+    overflow: "hidden",
   },
 
   /*
    * Width
    */
   w_full: {
-    width: '100%',
+    width: "100%",
   },
   h_full: {
-    height: '100%',
+    height: "100%",
   },
   h_full_vh: web({
-    height: '100vh',
+    height: "100vh",
   }),
 
   /**
@@ -112,10 +115,10 @@ export const atoms = {
    */
   util_screen_outer: [
     web({
-      minHeight: '100vh',
+      minHeight: "100vh",
     }),
     native({
-      height: '100%',
+      height: "100%",
     }),
   ] as ViewStyle,
 
@@ -123,7 +126,7 @@ export const atoms = {
    * Theme-independent bg colors
    */
   bg_transparent: {
-    backgroundColor: 'transparent',
+    backgroundColor: "transparent",
   },
 
   /*
@@ -179,25 +182,25 @@ export const atoms = {
     gap: tokens.space._5xl,
   },
   flex: {
-    display: 'flex',
+    display: "flex",
   },
   flex_col: {
-    flexDirection: 'column',
+    flexDirection: "column",
   },
   flex_row: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   flex_col_reverse: {
-    flexDirection: 'column-reverse',
+    flexDirection: "column-reverse",
   },
   flex_row_reverse: {
-    flexDirection: 'row-reverse',
+    flexDirection: "row-reverse",
   },
   flex_wrap: {
-    flexWrap: 'wrap',
+    flexWrap: "wrap",
   },
   flex_0: {
-    flex: web('0 0 auto') || (native(0) as number),
+    flex: web("0 0 auto") || (native(0) as number),
   },
   flex_1: {
     flex: 1,
@@ -212,62 +215,62 @@ export const atoms = {
     flexShrink: 0,
   },
   justify_start: {
-    justifyContent: 'flex-start',
+    justifyContent: "flex-start",
   },
   justify_center: {
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   justify_between: {
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   justify_end: {
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
   align_center: {
-    alignItems: 'center',
+    alignItems: "center",
   },
   align_start: {
-    alignItems: 'flex-start',
+    alignItems: "flex-start",
   },
   align_end: {
-    alignItems: 'flex-end',
+    alignItems: "flex-end",
   },
   align_baseline: {
-    alignItems: 'baseline',
+    alignItems: "baseline",
   },
   align_stretch: {
-    alignItems: 'stretch',
+    alignItems: "stretch",
   },
   self_auto: {
-    alignSelf: 'auto',
+    alignSelf: "auto",
   },
   self_start: {
-    alignSelf: 'flex-start',
+    alignSelf: "flex-start",
   },
   self_end: {
-    alignSelf: 'flex-end',
+    alignSelf: "flex-end",
   },
   self_center: {
-    alignSelf: 'center',
+    alignSelf: "center",
   },
   self_stretch: {
-    alignSelf: 'stretch',
+    alignSelf: "stretch",
   },
   self_baseline: {
-    alignSelf: 'baseline',
+    alignSelf: "baseline",
   },
 
   /*
    * Text
    */
   text_left: {
-    textAlign: 'left',
+    textAlign: "left",
   },
   text_center: {
-    textAlign: 'center',
+    textAlign: "center",
   },
   text_right: {
-    textAlign: 'right',
+    textAlign: "right",
   },
   text_2xs: {
     fontSize: tokens.fontSize._2xs,
@@ -331,7 +334,7 @@ export const atoms = {
     fontWeight: tokens.fontWeight.heavy,
   },
   italic: {
-    fontStyle: 'italic',
+    fontStyle: "italic",
   },
 
   /*
@@ -669,7 +672,7 @@ export const atoms = {
     margin: tokens.space._5xl,
   },
   m_auto: {
-    margin: 'auto',
+    margin: "auto",
   },
   mx_0: {
     marginLeft: 0,
@@ -716,8 +719,8 @@ export const atoms = {
     marginRight: tokens.space._5xl,
   },
   mx_auto: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    marginLeft: "auto",
+    marginRight: "auto",
   },
   my_0: {
     marginTop: 0,
@@ -764,8 +767,8 @@ export const atoms = {
     marginBottom: tokens.space._5xl,
   },
   my_auto: {
-    marginTop: 'auto',
-    marginBottom: 'auto',
+    marginTop: "auto",
+    marginBottom: "auto",
   },
   mt_0: {
     marginTop: 0,
@@ -801,7 +804,7 @@ export const atoms = {
     marginTop: tokens.space._5xl,
   },
   mt_auto: {
-    marginTop: 'auto',
+    marginTop: "auto",
   },
   mb_0: {
     marginBottom: 0,
@@ -837,7 +840,7 @@ export const atoms = {
     marginBottom: tokens.space._5xl,
   },
   mb_auto: {
-    marginBottom: 'auto',
+    marginBottom: "auto",
   },
   ml_0: {
     marginLeft: 0,
@@ -873,7 +876,7 @@ export const atoms = {
     marginLeft: tokens.space._5xl,
   },
   ml_auto: {
-    marginLeft: 'auto',
+    marginLeft: "auto",
   },
   mr_0: {
     marginRight: 0,
@@ -909,70 +912,70 @@ export const atoms = {
     marginRight: tokens.space._5xl,
   },
   mr_auto: {
-    marginRight: 'auto',
+    marginRight: "auto",
   },
 
   /*
    * Pointer events & user select
    */
   pointer_events_none: {
-    pointerEvents: 'none',
+    pointerEvents: "none",
   },
   pointer_events_auto: {
-    pointerEvents: 'auto',
+    pointerEvents: "auto",
   },
   user_select_none: {
-    userSelect: 'none',
+    userSelect: "none",
   },
   user_select_text: {
-    userSelect: 'text',
+    userSelect: "text",
   },
   user_select_all: {
-    userSelect: 'all',
+    userSelect: "all",
   },
 
   /*
    * Text decoration
    */
   underline: {
-    textDecorationLine: 'underline',
+    textDecorationLine: "underline",
   },
   strike_through: {
-    textDecorationLine: 'line-through',
+    textDecorationLine: "line-through",
   },
 
   /*
    * Display
    */
   hidden: {
-    display: 'none',
+    display: "none",
   },
 
   /*
    * Transition
    */
   transition_none: web({
-    transitionProperty: 'none',
+    transitionProperty: "none",
   }),
   transition_all: web({
-    transitionProperty: 'all',
-    transitionTimingFunction: 'cubic-bezier(0.17, 0.73, 0.14, 1)',
-    transitionDuration: '100ms',
+    transitionProperty: "all",
+    transitionTimingFunction: "cubic-bezier(0.17, 0.73, 0.14, 1)",
+    transitionDuration: "100ms",
   }),
   transition_color: web({
     transitionProperty:
-      'color, background-color, border-color, text-decoration-color, fill, stroke',
-    transitionTimingFunction: 'cubic-bezier(0.17, 0.73, 0.14, 1)',
-    transitionDuration: '100ms',
+      "color, background-color, border-color, text-decoration-color, fill, stroke",
+    transitionTimingFunction: "cubic-bezier(0.17, 0.73, 0.14, 1)",
+    transitionDuration: "100ms",
   }),
   transition_opacity: web({
-    transitionProperty: 'opacity',
-    transitionTimingFunction: 'cubic-bezier(0.17, 0.73, 0.14, 1)',
-    transitionDuration: '100ms',
+    transitionProperty: "opacity",
+    transitionTimingFunction: "cubic-bezier(0.17, 0.73, 0.14, 1)",
+    transitionDuration: "100ms",
   }),
   transition_transform: web({
-    transitionProperty: 'transform',
-    transitionTimingFunction: 'cubic-bezier(0.17, 0.73, 0.14, 1)',
-    transitionDuration: '100ms',
+    transitionProperty: "transform",
+    transitionTimingFunction: "cubic-bezier(0.17, 0.73, 0.14, 1)",
+    transitionDuration: "100ms",
   }),
-} as const
+} as const;

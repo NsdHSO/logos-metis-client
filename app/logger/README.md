@@ -33,7 +33,7 @@ noisy in dev, simply set it to a higher level, such as `warn`.
 ## Usage
 
 ```typescript
-import { logger } from '#/logger';
+import { logger } from "#/logger";
 ```
 
 ### `logger.error`

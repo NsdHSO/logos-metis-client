@@ -1,1 +1,1 @@
-export * as Sentry from '@sentry/react-native'
+export * as Sentry from "@sentry/react-native";

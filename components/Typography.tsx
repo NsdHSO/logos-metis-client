@@ -1,55 +1,39 @@
-import { Text, TextProps } from 'react-native';
-import { web } from '@app/platform/detection';
-import { atoms, HeadingLevels, headingStyles } from '@app/util/atoms';
-import React, { useEffect } from 'react';
-import { logger } from '@app/logger';
+import { Text, TextProps } from "react-native";
+import { web } from "@app/platform/detection";
+import { atoms, HeadingLevels, headingStyles } from "@app/util/atoms";
+import React from "react";
 
-export interface Typography {
-}
+export interface Typography {}
 
 /**
  * Our main text component. Use this most of the time.
  */
-export function TextSyn({
-                            children,
-                            style,
-                            selectable,
-                            ...rest
-                        }: TextProps) {
+export function TextSyn({ children, style, selectable, ...rest }: TextProps) {
+  const shared = {
+    uiTextView: true,
+    selectable,
+    style: style,
+    dataSet: Object.assign({}),
+    ...rest,
+  };
 
-
-    const shared = {
-        uiTextView: true,
-        selectable,
-        style: style,
-        dataSet: Object.assign({}),
-        ...rest,
-    };
-    useEffect(() => {
-        logger.log(JSON.stringify(children));
-    }, []);
-    return (
-        <Text {...shared}>
-            {children}
-        </Text>
-    );
+  return <Text {...shared}>{children}</Text>;
 }
-
 
 // Function to map heading level to the style
 export function createHeadingElement({ level }: { level: HeadingLevels }) {
-    return function HeadingElement({ style, ...rest }: TextProps) {
-        const headingStyle = headingStyles[level];  // Get the corresponding style
-        const attr = web({ role: 'heading', 'aria-level': level }) || {};
+  return function HeadingElement({ style, ...rest }: TextProps) {
+    const headingStyle = headingStyles[level]; // Get the corresponding style
+    const attr = web({ role: "heading", "aria-level": level }) || {};
 
-        return (
-            <TextSyn
-                {...attr}
-                {...rest}
-                style={[style, headingStyle]} // Apply the mapped style
-            />
-        );
-    };
+    return (
+      <TextSyn
+        {...attr}
+        {...rest}
+        style={[style, headingStyle]} // Apply the mapped style
+      />
+    );
+  };
 }
 
 /*
@@ -65,16 +49,9 @@ export const H7 = createHeadingElement({ level: 7 });
 export const H8 = createHeadingElement({ level: 8 });
 
 export function P({ style, ...rest }: TextProps) {
-
-    const attr =
-        web({
-            role: 'paragraph',
-        }) || {};
-    return (
-        <TextSyn
-            {...attr}
-            {...rest}
-            style={[atoms.text_md, style]}
-        />
-    );
+  const attr =
+    web({
+      role: "paragraph",
+    }) || {};
+  return <TextSyn {...attr} {...rest} style={[atoms.text_md, style]} />;
 }
