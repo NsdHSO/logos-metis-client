@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Text
+  dataSet={{}}
+  style={
+    [
+      {
+        "color": "#11181C",
+      },
+      [
+        undefined,
+        {
+          "fontSize": 40,
+          "fontWeight": "600",
+          "letterSpacing": 1.625,
+          "lineHeight": 40,
+        },
+      ],
+    ]
+  }
+  uiTextView={true}
+>
+  Snapshot test!
+</Text>
+`;

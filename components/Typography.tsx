@@ -1,18 +1,30 @@
-import { Text, TextProps } from "react-native";
+import { StyleSheet, Text, TextProps, useColorScheme } from "react-native";
 import { web } from "@app/platform/detection";
 import { atoms, HeadingLevels, headingStyles } from "@app/util/atoms";
 import React from "react";
+import { Colors } from "@app/constants/Colors";
 
 export interface Typography {}
 
 /**
  * Our main text component. Use this most of the time.
  */
-export function TextSyn({ children, style, selectable, ...rest }: TextProps) {
+export function TextSyn({
+  children,
+  style: styleWithout,
+  selectable,
+  ...rest
+}: TextProps) {
+  const colorScheme = useColorScheme() ?? "light";
+  const styles = StyleSheet.create({
+    text: {
+      color: colorScheme === "dark" ? Colors.dark.text : Colors.light.text,
+    },
+  });
   const shared = {
     uiTextView: true,
     selectable,
-    style: style,
+    style: [styles.text,styleWithout],
     dataSet: Object.assign({}),
     ...rest,
   };
