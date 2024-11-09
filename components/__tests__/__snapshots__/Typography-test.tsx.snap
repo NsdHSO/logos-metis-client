@@ -24,3 +24,196 @@ exports[`renders correctly 1`] = `
   Snapshot test!
 </Text>
 `;
+
+exports[`should have prop 1`] = `
+<Text
+  dataSet={{}}
+  style={
+    [
+      {
+        "color": "#11181C",
+      },
+      [
+        undefined,
+        {
+          "fontSize": 40,
+          "fontWeight": "600",
+          "letterSpacing": 1.625,
+          "lineHeight": 40,
+        },
+      ],
+    ]
+  }
+  uiTextView={true}
+>
+  Iancu
+</Text>
+`;
+
+exports[`should have prop h1 1`] = `
+<Text
+  dataSet={{}}
+  style={
+    [
+      {
+        "color": "#11181C",
+      },
+      [
+        undefined,
+        {
+          "fontSize": 32,
+          "fontWeight": "600",
+          "letterSpacing": 0,
+        },
+      ],
+    ]
+  }
+  uiTextView={true}
+>
+  Iancu
+</Text>
+`;
+
+exports[`should have prop h2 1`] = `
+<Text
+  dataSet={{}}
+  style={
+    [
+      {
+        "color": "#11181C",
+      },
+      [
+        undefined,
+        {
+          "fontSize": 32,
+          "fontWeight": "600",
+          "letterSpacing": 0,
+        },
+      ],
+    ]
+  }
+  uiTextView={true}
+>
+  Iancu
+</Text>
+`;
+
+exports[`should have prop h3 1`] = `
+<Text
+  dataSet={{}}
+  style={
+    [
+      {
+        "color": "#11181C",
+      },
+      [
+        undefined,
+        {
+          "fontSize": 26,
+          "fontWeight": "600",
+          "letterSpacing": 0,
+        },
+      ],
+    ]
+  }
+  uiTextView={true}
+>
+  Iancu
+</Text>
+`;
+
+exports[`should have prop h4 1`] = `
+<Text
+  dataSet={{}}
+  style={
+    [
+      {
+        "color": "#11181C",
+      },
+      [
+        undefined,
+        {
+          "fontSize": 22,
+          "fontWeight": "600",
+          "letterSpacing": 0,
+        },
+      ],
+    ]
+  }
+  uiTextView={true}
+>
+  Iancu
+</Text>
+`;
+
+exports[`should have prop h5 1`] = `
+<Text
+  dataSet={{}}
+  style={
+    [
+      {
+        "color": "#11181C",
+      },
+      [
+        undefined,
+        {
+          "fontSize": 20,
+          "fontWeight": "600",
+          "letterSpacing": 0,
+        },
+      ],
+    ]
+  }
+  uiTextView={true}
+>
+  Iancu
+</Text>
+`;
+
+exports[`should have prop h6 1`] = `
+<Text
+  dataSet={{}}
+  style={
+    [
+      {
+        "color": "#11181C",
+      },
+      [
+        undefined,
+        {
+          "fontSize": 18,
+          "fontWeight": "600",
+          "letterSpacing": 0,
+        },
+      ],
+    ]
+  }
+  uiTextView={true}
+>
+  Iancu
+</Text>
+`;
+
+exports[`should have prop h7 1`] = `
+<Text
+  dataSet={{}}
+  style={
+    [
+      {
+        "color": "#11181C",
+      },
+      [
+        undefined,
+        {
+          "fontSize": 16,
+          "fontWeight": "600",
+          "letterSpacing": 0,
+        },
+      ],
+    ]
+  }
+  uiTextView={true}
+>
+  Iancu
+</Text>
+`;
