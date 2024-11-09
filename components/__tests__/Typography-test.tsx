@@ -1,6 +1,6 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
-import { H1, H2, H3, H4, H5, H6, H7 } from '@components/Typography';
+import { H1, H2, H3, H4, H5, H6, H7, H8, P } from '@components/Typography';
 
 it(`renders correctly`, () => {
   const tree = renderer.create(<H1>Snapshot test!</H1>).toJSON();
@@ -68,4 +68,21 @@ it('should have prop h7', () => {
 
   expect(...tree.children).toEqual('Iancu')
   expect(tree.props.style[1][1].fontSize).toEqual(16)
+});
+
+
+it('should have prop h8', () => {
+  const tree = renderer.create(<H8>Iancu</H8>).toJSON()as any;
+  expect(tree).toMatchSnapshot();
+
+  expect(...tree.children).toEqual('Iancu')
+  expect(tree.props.style[1][1].fontSize).toEqual(14)
+});
+
+it('should have prop p', () => {
+  const tree = renderer.create(<P>Iancu</P>).toJSON()as any;
+  expect(tree).toMatchSnapshot();
+
+  expect(...tree.children).toEqual('Iancu')
+  expect(tree.props.style[1][0].fontSize).toEqual(16)
 });
